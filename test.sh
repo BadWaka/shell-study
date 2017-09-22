@@ -36,5 +36,8 @@
 # echo ${string:1:4}
 # echo `expr index "$string" is`
 
-array_name=(value0 value1 value2 value3)
-echo ${array_name[n]}
+# array_name=(value0 value1 value2 value3)
+# echo ${array_name[n]}
+
+var=http://www.aaa.com/123.htm
+echo ${var#*//}
