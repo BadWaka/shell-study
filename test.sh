@@ -55,12 +55,28 @@
 # echo "Shell使用的当前选项：$-"
 # echo "显示最后命令的退出状态：$?"
 
-echo "-- \$* 演示 ---"
-for i in "$*"; do
-    echo $i
-done
+# echo "-- \$* 演示 ---"
+# for i in "$*"; do
+#     echo $i
+# done
 
-echo "-- \$@ 演示 ---"
-for i in "$@"; do
-    echo $i
-done
+# echo "-- \$@ 演示 ---"
+# for i in "$@"; do
+#     echo $i
+# done
+
+# my_array[0]=A
+# my_array[1]=B
+# my_array[2]=C
+# my_array[3]=D
+
+# echo "数组的元素为: ${my_array[*]}"
+# echo "数组的元素为: ${my_array[@]}"
+
+my_array[0]=A
+my_array[1]=B
+my_array[2]=C
+my_array[3]=D
+
+echo "数组元素个数为: ${#my_array[*]}"
+echo "数组元素个数为: ${#my_array[@]}"
