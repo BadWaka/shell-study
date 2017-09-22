@@ -249,18 +249,37 @@
 #     echo "是的！$FILM 是一个好网站"
 # done
 
-echo '输入 1 到 4 之间的数字:'
-echo '你输入的数字为:'
-read aNum
-case $aNum in
-    1)  echo '你选择了 1'
-    ;;
-    2)  echo '你选择了 2'
-    ;;
-    3)  echo '你选择了 3'
-    ;;
-    4)  echo '你选择了 4'
-    ;;
-    *)  echo '你没有输入 1 到 4 之间的数字'
-    ;;
-esac
+# echo '输入 1 到 4 之间的数字:'
+# echo '你输入的数字为:'
+# read aNum
+# case $aNum in
+#     1)  echo '你选择了 1'
+#     ;;
+#     2)  echo '你选择了 2'
+#     ;;
+#     3)  echo '你选择了 3'
+#     ;;
+#     4)  echo '你选择了 4'
+#     ;;
+#     *)  echo '你没有输入 1 到 4 之间的数字'
+#     ;;
+# esac
+
+# demoFun(){
+#     echo "这是我的第一个 shell 函数"
+# }
+# echo "-----函数开始执行-----"
+# demoFun
+# echo "函数执行完毕"
+
+funWithReturn(){
+    echo "这个函数会对输入的两个数字进行相加运算"
+    echo "输入第一个数字："
+    read aNum
+    echo "输入第二个数字："
+    read anotherNum
+    echo "两个数字分别为 $aNum 和 $anotherNum ！"
+    return $(($aNum+$anotherNum))
+}
+funWithReturn
+echo "输入的两个数字之和为 $? !"
